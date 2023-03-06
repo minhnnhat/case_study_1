@@ -1,0 +1,12 @@
+awsRegion: ap-southeast-1
+priorityClassName: system-cluster-critical
+rbac:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::871400347589:role/cluster-autoscaler-tixlabs-production
+serviceMonitor:
+  enabled: true
+  namespace: platform
+prometheusRule:
+  enabled: true
+  namespace: platform

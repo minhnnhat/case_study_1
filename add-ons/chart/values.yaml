@@ -1,0 +1,18 @@
+# Global Values
+repoUrl: 'https://github.com/minhnnhat/add-ons.git'
+targetRevision: HEAD
+region: ''
+account: ''
+clusterName: ''
+
+# Nginx values
+ingressNginx:
+  enable: true
+
+# Metrics Server values
+metricsServer:
+  enable: true
+
+# Cluster Autoscaler values
+clusterAutoscaler:
+  enable: true

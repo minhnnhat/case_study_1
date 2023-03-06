@@ -1,0 +1,31 @@
+crds:
+  # -- Install and upgrade CRDs
+  install: true
+  # -- Keep CRDs on chart uninstall
+  keep: true
+controller:
+  replicas: 1
+  args:
+    # -- define the application controller `--status-processors`
+    statusProcessors: "20"
+    # -- define the application controller `--operation-processors`
+    operationProcessors: "10"
+    # -- define the application controller `--app-resync`
+    appResyncPeriod: "30"
+    # -- define the application controller `--self-heal-timeout-seconds`
+    selfHealTimeout: "3"
+    # -- define the application controller `--repo-server-timeout-seconds`
+    repoServerTimeoutSeconds: "60"
+server:
+  ingress:
+    enabled: false # for control argocd by itself
+  # -- Manage ArgoCD configmap (Declarative Setup)
+  configEnabled: true
+  config:
+    exec.enabled: "true"
+configs:
+  repositories:
+    addons-repo:
+      name: addons-repo
+      type: git
+      url: ${GIT_URL}

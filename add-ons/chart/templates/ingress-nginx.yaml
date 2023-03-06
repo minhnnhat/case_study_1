@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: addons/ingress-nginx
+    path: add-ons/addons/ingress-nginx
     targetRevision: {{ .Values.targetRevision }}
     helm:
       values: |

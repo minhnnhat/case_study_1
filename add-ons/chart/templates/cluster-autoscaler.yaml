@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: addons/cluster-autoscaler
+    path: add-ons/addons/cluster-autoscaler
     targetRevision: {{ .Values.targetRevision }}
     helm:
       values: |
